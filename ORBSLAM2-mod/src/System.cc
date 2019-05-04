@@ -344,6 +344,8 @@ void System::Shutdown()
         usleep(5000);
     }
 
+    SaveMapRequest();
+ 
     pangolin::BindToContext("ORB-SLAM2: Map Viewer");
 }
 

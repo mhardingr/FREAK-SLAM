@@ -1,0 +1,23 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# The Settings of ORB-SLAM2 Monocular. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# the Orb Vocabulary File Path. Either .bin File or .txt File is Ok.
+  
+Orb_Vocabulary: /home/nanda/Documents/CMU/16833/Project/ORBSLAM_MapSave-master/Vocabulary/ORBvoc.txt
+
+# the Camera Setting File Path. 
+
+Cam_Setting: /home/nanda/Documents/CMU/16833/Project/ORBSLAM_MapSave-master/Examples/Monocular/Robotcar.yaml
+
+# Whether Run the ORB-SLAM2 System Using the Exsiting Map File (0 for no , 1 for yes).
+
+is_ReuseMap: 0
+
+# the Exsiting Map File Path (if the above item is 0, this is unnessesary)
+
+ReuseMap: /home/nanda/Documents/CMU/16833/Project/ORBSLAM_MapSave-master/Examples/Monocular/Slam_latest_MapNight10000.bin
+
+

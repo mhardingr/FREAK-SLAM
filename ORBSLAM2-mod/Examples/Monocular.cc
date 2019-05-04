@@ -25,9 +25,14 @@
 
 using namespace std;
 
-
-int main()
+void LoadImages(const string &strSequence, vector<string> &vstrImageFilenames);
+int main(int argc, char **argv)
 {
+    if(argc != 2)
+    {
+        cerr << endl << "Usage: ./Monocular path_to_sequence" << endl;
+        return 1;
+    }
     const string &strSettingPath = "Setting.yaml";
     cv::FileStorage fSettings(strSettingPath, cv::FileStorage::READ);
     if(!fSettings.isOpened())
@@ -51,19 +56,23 @@ int main()
     cout << "Start processing sequence ..." << endl;
 
     // Main loop
+    vector<string> vstrImageFilenames;
+    vector<double> vTimestamps;
+    LoadImages(string(argv[1]), vstrImageFilenames);
+    // int nImages = 0;// vstrImageFilenames.size();
     cv::Mat im;
-    cv::VideoCapture capture(0);
-while(1)
+    for(int ni=0; ni<10000; ni++)
     {
         // Read image from file
-        capture >>im;
+        im = cv::imread(vstrImageFilenames[ni],CV_LOAD_IMAGE_UNCHANGED);
+        cout<<ni<<endl;
         if(im.empty())
         {
             cerr << endl << "Failed to load image!" << endl;
             return 1;
         }
         // Pass the image to the SLAM system
-        SLAM.TrackMonocular(im,0);
+        SLAM.TrackMonocular(im,ni);
 
         if(SLAM.isShutdown())
             break;
@@ -71,7 +80,21 @@ while(1)
     // Stop all threads
     SLAM.Shutdown();
     // Save camera trajectory
-    SLAM.SaveKeyFrameTrajectoryTUM("KeyFrameTrajectory.txt");
+    SLAM.SaveKeyFrameTrajectoryTUM("RobotcarKeyFrameTrajectory.txt");
 
     return 0;
+}
+void LoadImages(const string &strPathToSequence, vector<string> &vstrImageFilenames)
+{
+    string strPrefixLeft = strPathToSequence + "/data/mono_rear_converted/";
+    string strPathToNameList = strPathToSequence + "/data/filenames.txt";
+
+    ifstream nameList;
+    nameList.open(strPathToNameList);
+    string x;
+    string path;
+    while(nameList >> x) {
+        path = strPrefixLeft + x;
+        vstrImageFilenames.push_back(path);
+    }
 }

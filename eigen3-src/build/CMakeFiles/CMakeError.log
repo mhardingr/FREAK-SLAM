@@ -1,0 +1,174 @@
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wshorten64to32 failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8db36/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8db36.dir/build.make CMakeFiles/cmTC_8db36.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8db36.dir/src.cxx.o
+/usr/bin/c++     -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -DCOMPILER_SUPPORT_Wshorten64to32 -Werror   -Wshorten-64-to-32 -o CMakeFiles/cmTC_8db36.dir/src.cxx.o -c /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wshorten-64-to-32'
+CMakeFiles/cmTC_8db36.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_8db36.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_8db36.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8db36/fast' failed
+make: *** [cmTC_8db36/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wenumconversion failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c050c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c050c.dir/build.make CMakeFiles/cmTC_c050c.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c050c.dir/src.cxx.o
+/usr/bin/c++     -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -DCOMPILER_SUPPORT_Wenumconversion -Werror   -Wenum-conversion -o CMakeFiles/cmTC_c050c.dir/src.cxx.o -c /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wenum-conversion'
+CMakeFiles/cmTC_c050c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_c050c.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_c050c.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c050c/fast' failed
+make: *** [cmTC_c050c/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wcpp11extensions failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fe68d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fe68d.dir/build.make CMakeFiles/cmTC_fe68d.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fe68d.dir/src.cxx.o
+/usr/bin/c++     -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -DCOMPILER_SUPPORT_Wcpp11extensions -Werror   -Wc++11-extensions -o CMakeFiles/cmTC_fe68d.dir/src.cxx.o -c /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wc++11-extensions'
+CMakeFiles/cmTC_fe68d.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_fe68d.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_fe68d.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fe68d/fast' failed
+make: *** [cmTC_fe68d/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd981 failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bebf6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bebf6.dir/build.make CMakeFiles/cmTC_bebf6.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bebf6.dir/src.cxx.o
+/usr/bin/c++     -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_wd981 -Werror   -wd981 -o CMakeFiles/cmTC_bebf6.dir/src.cxx.o -c /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-wd981'
+CMakeFiles/cmTC_bebf6.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_bebf6.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_bebf6.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bebf6/fast' failed
+make: *** [cmTC_bebf6/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd2304 failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9b64f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9b64f.dir/build.make CMakeFiles/cmTC_9b64f.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9b64f.dir/src.cxx.o
+/usr/bin/c++     -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_wd2304 -Werror   -wd2304 -o CMakeFiles/cmTC_9b64f.dir/src.cxx.o -c /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-wd2304'
+CMakeFiles/cmTC_9b64f.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_9b64f.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_9b64f.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9b64f/fast' failed
+make: *** [cmTC_9b64f/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_STRICTANSI failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bbbc6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bbbc6.dir/build.make CMakeFiles/cmTC_bbbc6.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bbbc6.dir/src.cxx.o
+/usr/bin/c++     -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_STRICTANSI -Werror   -strict-ansi -o CMakeFiles/cmTC_bbbc6.dir/src.cxx.o -c /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-strict-ansi'
+CMakeFiles/cmTC_bbbc6.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_bbbc6.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_bbbc6.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bbbc6/fast' failed
+make: *** [cmTC_bbbc6/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Qunusedarguments failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0ec81/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ec81.dir/build.make CMakeFiles/cmTC_0ec81.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0ec81.dir/src.cxx.o
+/usr/bin/c++     -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_Qunusedarguments -Werror   -Qunused-arguments -o CMakeFiles/cmTC_0ec81.dir/src.cxx.o -c /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Qunused-arguments'
+CMakeFiles/cmTC_0ec81.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_0ec81.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_0ec81.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0ec81/fast' failed
+make: *** [cmTC_0ec81/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9b911/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9b911.dir/build.make CMakeFiles/cmTC_9b911.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9b911.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_9b911.dir/CheckSymbolExists.c.o   -c /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9b911
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b911.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_9b911.dir/CheckSymbolExists.c.o  -o cmTC_9b911 -rdynamic 
+CMakeFiles/cmTC_9b911.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9b911.dir/build.make:97: recipe for target 'cmTC_9b911' failed
+make[1]: *** [cmTC_9b911] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9b911/fast' failed
+make: *** [cmTC_9b911/fast] Error 2
+
+File /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_211d7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_211d7.dir/build.make CMakeFiles/cmTC_211d7.dir/build
+make[1]: Entering directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_211d7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_211d7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_211d7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_211d7.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_211d7.dir/CheckFunctionExists.c.o  -o cmTC_211d7 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_211d7.dir/build.make:97: recipe for target 'cmTC_211d7' failed
+make[1]: *** [cmTC_211d7] Error 1
+make[1]: Leaving directory '/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_211d7/fast' failed
+make: *** [cmTC_211d7/fast] Error 2
+
+

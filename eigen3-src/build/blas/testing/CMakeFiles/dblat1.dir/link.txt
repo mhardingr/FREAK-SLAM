@@ -1,0 +1,1 @@
+/usr/bin/gfortran    -O3 CMakeFiles/dblat1.dir/dblat1.f.o  -o dblat1  ../libeigen_blas.so -Wl,-rpath,/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/blas 

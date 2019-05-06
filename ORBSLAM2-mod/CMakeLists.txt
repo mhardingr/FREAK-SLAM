@@ -80,13 +80,8 @@ ${Boost_LIBRARIES}
 )
 
 # Build examples
-
-
-
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular)
-
-add_executable(Monocular
-Examples/Monocular.cc)
+add_executable(Monocular Examples/Monocular/Monocular.cc)
 target_link_libraries(Monocular ${PROJECT_NAME})
 
 # Build tools

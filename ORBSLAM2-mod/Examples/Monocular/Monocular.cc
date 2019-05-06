@@ -86,8 +86,8 @@ int main(int argc, char **argv)
 }
 void LoadImages(const string &strPathToSequence, vector<string> &vstrImageFilenames)
 {
-    string strPrefixLeft = strPathToSequence + "/data/mono_rear_converted/";
-    string strPathToNameList = strPathToSequence + "/data/filenames.txt";
+    string strPrefixLeft = strPathToSequence + "/mono_rear_short/";
+    string strPathToNameList = strPathToSequence + "/filenames.txt";
 
     ifstream nameList;
     nameList.open(strPathToNameList);

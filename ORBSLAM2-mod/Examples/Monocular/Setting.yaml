@@ -10,7 +10,7 @@ Orb_Vocabulary: /home/droid/Downloads/833fp/FREAK-SLAM/ORBSLAM2-mod/Vocabulary/O
 
 # the Camera Setting File Path. 
 
-Cam_Setting: /home/droid/Downloads/833fp/FREAK-SLAM/ORBSLAM2-mod/Examples/Robotcar.yaml
+Cam_Setting: /home/droid/Downloads/833fp/FREAK-SLAM/ORBSLAM2-mod/Examples/Monocular/Robotcar.yaml
 
 # Whether Run the ORB-SLAM2 System Using the Exsiting Map File (0 for no , 1 for yes).
 

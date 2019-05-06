@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/droid/Downloads/833fp/FREAK-SLAM/eigen3/test/nestbyvalue.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "nestbyvalue"
+	}
+}

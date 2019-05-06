@@ -6,5 +6,5 @@ Fortran_FLAGS = -O3
 
 Fortran_DEFINES = 
 
-Fortran_INCLUDES = -I/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build/blas/testing -I/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/blas/testing -I/home/droid/Downloads/833fp/eigen-eigen-323c052e1731 -I/home/droid/Downloads/833fp/eigen-eigen-323c052e1731/build 
+Fortran_INCLUDES = -I/home/droid/Downloads/833fp/FREAK-SLAM/eigen3 
 

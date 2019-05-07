@@ -28,7 +28,7 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3.0 REQUIRED)
 find_package(Eigen3 3.1.0 REQUIRED)
 find_package(Pangolin REQUIRED)
 find_package(Boost  1.54.0  	     # Minimum or EXACT version e.g. 1.36.0
@@ -80,13 +80,8 @@ ${Boost_LIBRARIES}
 )
 
 # Build examples
-
-
-
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular)
-
-add_executable(Monocular
-Examples/Monocular.cc)
+add_executable(Monocular Examples/Monocular/Monocular.cc)
 target_link_libraries(Monocular ${PROJECT_NAME})
 
 # Build tools

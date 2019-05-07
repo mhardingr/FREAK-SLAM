@@ -531,7 +531,7 @@ void Tracking::Track()
         mlFrameTimes.push_back(mCurrentFrame.mTimeStamp);
         mlbLost.push_back(mState==LOST);
     }
-    else
+    else if (mState!=LOST)
     {
         // This can happen if tracking is lost
         mlRelativeFramePoses.push_back(mlRelativeFramePoses.back());

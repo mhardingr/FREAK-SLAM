@@ -57,6 +57,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/features2d/features2d.hpp>
+#include <opencv2/xfeatures2d.hpp>	// xfeatures2d::FREAK::*
 #include <opencv2/imgproc/imgproc.hpp>
 #include <vector>
 #include "ORBextractor.h"
@@ -1064,12 +1065,16 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
         _descriptors.release();
     else
     {
-        _descriptors.create(nkeypoints, 32, CV_8U);
+		// TODO
+        _descriptors.create(nkeypoints, 64, CV_8U);
         descriptors = _descriptors.getMat();
     }
 
     _keypoints.clear();
     _keypoints.reserve(nkeypoints);
+
+	// Init freak feature extractor from opencv
+	cv::Ptr<xfeatures2d::FREAK> freak = xfeatures2d::FREAK::create();
 
     int offset = 0;
     for (int level = 0; level < nlevels; ++level)
@@ -1086,7 +1091,8 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
 
         // Compute the descriptors
         Mat desc = descriptors.rowRange(offset, offset + nkeypointsLevel);
-        computeDescriptors(workingMat, keypoints, desc, pattern);
+		freak->compute(workingMat, keypoints, desc);
+		//computeDescriptors(workingMat, keypoints, desc, pattern);
 
         offset += nkeypointsLevel;
 

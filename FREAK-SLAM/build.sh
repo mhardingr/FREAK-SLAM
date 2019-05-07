@@ -4,7 +4,7 @@ cd Thirdparty/DBoW2
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j
+make -j4
 
 cd ../../g2o
 
@@ -13,7 +13,7 @@ echo "Configuring and building Thirdparty/g2o ..."
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j
+make -j4
 
 cd ../../../
 
@@ -27,8 +27,8 @@ echo "Configuring and building ORB_SLAM2 ..."
 
 mkdir build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$(nproc)
+cmake .. -DCMAKE_BUILD_TYPE=Release -DOpenCV_DIR=/home/droid/opencv-3.1.0
+make -j4
 cd ..
 
 echo "Converting vocabulary to binary"

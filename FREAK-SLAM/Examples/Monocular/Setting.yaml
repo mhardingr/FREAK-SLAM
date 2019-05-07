@@ -6,7 +6,7 @@
 
 # the Orb Vocabulary File Path. Either .bin File or .txt File is Ok.
   
-Orb_Vocabulary: /home/droid/Downloads/833fp/FREAK-SLAM/FREAK-SLAM/Vocabulary/ORBvoc.txt
+Orb_Vocabulary: /home/droid/Downloads/833fp/FREAK-SLAM/FREAK-SLAM/Vocabulary/freak_voc.txt
 
 # the Camera Setting File Path. 
 

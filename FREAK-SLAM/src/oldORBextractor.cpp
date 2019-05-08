@@ -56,8 +56,7 @@
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include <opencv2/features2d.hpp>
-#include <opencv2/xfeatures2d.hpp>	// xfeatures2d::FREAK::*
+#include <opencv2/features2d/features2d.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <vector>
 #include "ORBextractor.h"
@@ -72,7 +71,7 @@ namespace ORB_SLAM2
 const int PATCH_SIZE = 31;
 const int HALF_PATCH_SIZE = 15;
 const int EDGE_THRESHOLD = 19;
-const bool use_freak = true;
+
 
 static float IC_Angle(const Mat& image, Point2f pt,  const vector<int> & u_max)
 {
@@ -410,12 +409,7 @@ static int bit_pattern_31_[256*4] =
 ORBextractor::ORBextractor(int _nfeatures, float _scaleFactor, int _nlevels,
          int _iniThFAST, int _minThFAST):
     nfeatures(_nfeatures), scaleFactor(_scaleFactor), nlevels(_nlevels),
-    iniThFAST(_iniThFAST), minThFAST(_minThFAST),
-	freak( xfeatures2d::FREAK::create(false, //orientationNormalized
-										true,//scaleNormalized - SHOULD BE NORMALIZED
-										scaleFactor,
-										nlevels) ),
-	orb( cv::ORB::create(_nfeatures, _scaleFactor, _nlevels, _iniThFAST))
+    iniThFAST(_iniThFAST), minThFAST(_minThFAST)
 {
     mvScaleFactor.resize(nlevels);
     mvLevelSigma2.resize(nlevels);
@@ -1051,13 +1045,6 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
     if(_image.empty())
         return;
 
-	if (use_freak) {
-		// Use ORB to detect FAST keypoints, then compute FREAK descriptors for
-		// these keypoints
-		orb->detect(_image, _keypoints, _mask);
-		return freak->compute(_image, _keypoints, _descriptors);
-	}
-
     Mat image = _image.getMat();
     assert(image.type() == CV_8UC1 );
 
@@ -1077,8 +1064,7 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
         _descriptors.release();
     else
     {
-		// TODO
-        _descriptors.create(nkeypoints, 64, CV_8U);
+        _descriptors.create(nkeypoints, 32, CV_8U);
         descriptors = _descriptors.getMat();
     }
 
@@ -1100,8 +1086,7 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
 
         // Compute the descriptors
         Mat desc = descriptors.rowRange(offset, offset + nkeypointsLevel);
-		freak->compute(workingMat, keypoints, desc);
-		//computeDescriptors(workingMat, keypoints, desc, pattern);
+        computeDescriptors(workingMat, keypoints, desc, pattern);
 
         offset += nkeypointsLevel;
 

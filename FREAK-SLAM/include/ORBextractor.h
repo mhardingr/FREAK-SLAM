@@ -24,6 +24,8 @@
 #include <vector>
 #include <list>
 #include <opencv/cv.h>
+#include <opencv2/features2d/features2d.hpp>	// features2d::ORB::*
+#include <opencv2/xfeatures2d.hpp>	// xfeatures2d::FREAK::*
 
 
 namespace ORB_SLAM2
@@ -108,6 +110,10 @@ protected:
     std::vector<float> mvInvScaleFactor;    
     std::vector<float> mvLevelSigma2;
     std::vector<float> mvInvLevelSigma2;
+
+	// TODO
+	cv::Ptr<cv::ORB> orb;
+	cv::Ptr<cv::xfeatures2d::FREAK> freak;
 };
 
 } //namespace ORB_SLAM

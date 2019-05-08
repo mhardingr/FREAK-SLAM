@@ -115,12 +115,14 @@ bool Initializer::Initialize(const Frame &CurrentFrame, const vector<int> &vMatc
     if(RH>0.40)
 	{
     	//cout << __FUNCTION__ << " : Homography Mode Computing.." << endl;
-        return ReconstructH(vbMatchesInliersH,H,mK,R21,t21,vP3D,vbTriangulated,1.0,50);
+		// TODO
+        return ReconstructH(vbMatchesInliersH,H,mK,R21,t21,vP3D,vbTriangulated,1.0,35);
 	}
     else //if(pF_HF>0.6)
 	{	
-    	//cout << __FUNCTION__ << "Fundamental Mode Computing.." << endl;
-        return ReconstructF(vbMatchesInliersF,F,mK,R21,t21,vP3D,vbTriangulated,1.0,50);
+    	//cout << __FUNCTION__ << "Fundamental Mode Computing.." << RH << endl;
+		// TODO
+        return ReconstructF(vbMatchesInliersF,F,mK,R21,t21,vP3D,vbTriangulated,1.0,35);
 	}
     return false;
 }
@@ -521,6 +523,8 @@ bool Initializer::ReconstructF(vector<bool> &vbMatchesInliers, cv::Mat &F21, cv:
     // If there is not a clear winner or not enough triangulated points reject initialization
     if(maxGood<nMinGood || nsimilar>1)
     {
+		cout << "MaxGood, nMinGood, n_similar: " << maxGood << "," << nMinGood << "," << nsimilar << "\n" << endl;
+		cout << "Not a clear winner or not enough tri. points, rejecting init\n" << endl;
         return false;
     }
 
@@ -570,6 +574,7 @@ bool Initializer::ReconstructF(vector<bool> &vbMatchesInliers, cv::Mat &F21, cv:
             return true;
         }
     }
+	cout << "Not enough parallax, rejecting init\n" << endl;
 
     return false;
 }

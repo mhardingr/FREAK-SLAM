@@ -132,7 +132,7 @@ public:
 
 	void SetMap(Map* map);
 	void SetKeyFrameDatabase(KeyFrameDatabase* pKeyFrameDB);
-	void SetORBvocabulary(ORBVocabulary* pORBvocabulary);
+	void SetORBvocabulary(FREAKVocabulary* pORBvocabulary);
 	void SetMapPoints(std::vector<MapPoint*> spMapPoints);
 	void SetSpanningTree(std::vector<KeyFrame*> vpKeyFrames);
 	void SetGridParams(std::vector<KeyFrame*> vpKeyFrames);
@@ -227,7 +227,7 @@ protected:
 
  	// BoW
     KeyFrameDatabase* mpKeyFrameDB;
-    ORBVocabulary* mpORBvocabulary;
+    FREAKVocabulary* mpORBvocabulary;
 
     // Grid over the image to speed up feature matching
     std::vector< std::vector <std::vector<size_t> > > mGrid;

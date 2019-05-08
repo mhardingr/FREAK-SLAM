@@ -34,10 +34,9 @@ using namespace std;
 namespace ORB_SLAM2
 {
 
-const int ORBmatcher::TH_HIGH = 60;//100;
-const int ORBmatcher::TH_LOW = 25;//50;
+const int ORBmatcher::TH_HIGH = 100;
+const int ORBmatcher::TH_LOW = 50;
 const int ORBmatcher::HISTO_LENGTH = 30;
-const int ORBmatcher::TH_FIRST_CASC = 100; // Threshold for first 4B of dist metric
 
 ORBmatcher::ORBmatcher(float nnratio, bool checkOri): mfNNratio(nnratio), mbCheckOrientation(checkOri)
 {
@@ -512,6 +511,7 @@ int ORBmatcher::SearchForInitialization(Frame &F1, Frame &F2, vector<cv::Point2f
                 }
             }
         }
+
     }
 
     //Update prev matched
@@ -1654,21 +1654,7 @@ int ORBmatcher::DescriptorDistance(const cv::Mat &a, const cv::Mat &b)
 
     int dist=0;
 
-	// Since FREAKdescriptor is 64 bytes, loop goes through 16 4B ints
-	// Implements cascadic distance which shortcuts when distance above
-	// threshold value within first 16 bytes.
-	// TODO
-	for (int i=0; i<4; i++, pa++, pb++) {
-        unsigned  int v = *pa ^ *pb;
-        v = v - ((v >> 1) & 0x55555555);
-        v = (v & 0x33333333) + ((v >> 2) & 0x33333333);
-        dist += (((v + (v >> 4)) & 0xF0F0F0F) * 0x1010101) >> 24;
-	}
-	if (dist > TH_FIRST_CASC) {
-		// Short-circuit computation if distance is high within first 4B
-		return TH_HIGH;
-	}
-    for(int i=4; i<16; i++, pa++, pb++)
+    for(int i=0; i<8; i++, pa++, pb++)
     {
         unsigned  int v = *pa ^ *pb;
         v = v - ((v >> 1) & 0x55555555);

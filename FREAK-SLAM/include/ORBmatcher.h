@@ -87,6 +87,7 @@ public:
     static const int TH_LOW;
     static const int TH_HIGH;
     static const int HISTO_LENGTH;
+	static const int TH_FIRST_CASC; // Threshold for first casc of dist metric
 
 
 protected:

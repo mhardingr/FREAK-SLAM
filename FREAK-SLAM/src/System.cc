@@ -64,7 +64,7 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
 
 
     //Load ORB Vocabulary
-    mpVocabulary = new ORBVocabulary();
+    mpVocabulary = new FREAKVocabulary(); // TODO
     cout << endl << "Loading ORB Vocabulary. This could take a while..." << endl;
     bool bVocLoad = false; // chose loading method based on file extension
     if (has_suffix(strVocFile, ".txt"))

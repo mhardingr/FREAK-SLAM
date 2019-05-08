@@ -61,7 +61,7 @@ int main(int argc, char **argv)
     LoadImages(string(argv[1]), vstrImageFilenames);
     // int nImages = 0;// vstrImageFilenames.size();
     cv::Mat im;
-    for(int ni=0; ni<10000; ni++)
+    for(int ni=0; ni<10000; ni++) //TODO
     {
         // Read image from file
         im = cv::imread(vstrImageFilenames[ni],CV_LOAD_IMAGE_UNCHANGED);
@@ -73,6 +73,8 @@ int main(int argc, char **argv)
         }
         // Pass the image to the SLAM system
         SLAM.TrackMonocular(im,ni);
+		//cout << "Out of SLAM.TrackMonocular()!\n" << endl;
+
 
         if(SLAM.isShutdown())
             break;

@@ -1,6 +1,24 @@
 # FREAK-SLAM
 FREAK-SLAM implementation for 16-833 Final Project
 
+# Running ORB-SLAM2/FREAK-SLAM
+
+For this, you must edit the **Setting.yaml** and **Robotcar.yaml** in the **Examples/Monocular** folder to match your sequence specification and to point to your vocabulary. You may also specify if you would like to reuse the map/map save path here.
+
+Next reorganise your data folder to contain a folder named **mono_rear_short** with the images in the sequence and a file named **filenames.txt** containing the filenames of each image in the image folder.
+
+Finally, run
+```
+cd Examples/Monocular
+./Monocular path-to-data-folder
+```
+
+This procedure works for both ORB-SLAM as well as FREAK-SLAM.
+
+Slightly modified original ORB-SLAM2 README.md below.
+
+---
+
 # 1. License
 
 ORB-SLAM2 is released under a [GPLv3 license](https://github.com/raulmur/ORB_SLAM2/blob/master/License-gpl.txt). For a list of all code/library dependencies (and associated licenses), please see [Dependencies.md](https://github.com/raulmur/ORB_SLAM2/blob/master/Dependencies.md).
@@ -49,16 +67,3 @@ chmod +x build.sh
 ```
 This will create **libORB_SLAM.so**  at *lib* folder and the executables **Monocular**, in *Examples* folder.
 
-# 4. Running ORB-SLAM2/FREAK-SLAM
-
-For this, you must edit the **Setting.yaml** and **Robotcar.yaml** in the **Examples/Monocular** folder to match your sequence specification and to point to your vocabulary. You may also specify if you would like to reuse the map/map save path here.
-
-Next reorganise your data folder to contain a folder named **mono_rear_short** with the images in the sequence and a file named **filenames.txt** containing the filenames of each image in the image folder.
-
-Finally, run
-```
-cd Examples/Monocular
-./Monocular path-to-data-folder
-```
-
-This procedure works for both ORB-SLAM as well as FREAK-SLAM.
